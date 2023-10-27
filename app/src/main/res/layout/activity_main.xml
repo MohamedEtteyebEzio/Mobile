@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/app_background"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_gravity="center"
+
+
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/archivo_medium"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="@string/nav_bar"
+        android:textColor="#000"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/playfair_display"
+        android:padding="30dp"
+        android:text="@string/Age"
+        android:textColor="#000"
+        android:textSize="25sp" />
+
+    <SeekBar
+        android:id="@+id/skAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:max="120"
+        android:padding="20dp"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="3dp"
+        android:background="@drawable/line_shape" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/archivo_medium"
+        android:layout_marginTop="30dp"
+        android:text="@string/q1"
+        android:textSize="25sp"
+        android:textStyle="normal"
+
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/Grp" >
+        <RadioButton
+            android:id="@+id/Yes"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Yes"
+            android:fontFamily="@font/archivo_medium"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <RadioButton
+            android:id="@+id/No"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="No"
+            android:fontFamily="@font/archivo_medium"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </RadioGroup>
+    <EditText
+        android:id="@+id/mLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:fontFamily="@font/archivo_medium"
+        android:textSize="25sp"
+        android:hint="Measured value (in mmol/l)"
+        android:inputType="numberDecimal"
+        />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="CONSULT"
+        android:fontFamily="@font/archivo_medium"
+        android:textSize="20sp"
+        android:padding="12dp"
+        android:background="@drawable/button_shape"
+        />
+    <TextView
+        android:id="@+id/tvres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textStyle="bold"
+        android:fontFamily="@font/archivo_medium"
+        android:textSize="23sp"
+       android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:textColor="@color/red"
+        />
+
+
+</LinearLayout>
+
+
+
+
+
+
+
