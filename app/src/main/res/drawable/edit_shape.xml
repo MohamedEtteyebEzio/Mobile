@@ -1,0 +1,7 @@
+<!-- edit_text_bottom_line.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Focused state -->
+    <item android:drawable="@color/red" android:state_focused="true" />
+    <!-- Default state (unfocused) -->
+    <item android:drawable="@color/blue" />
+</layer-list>

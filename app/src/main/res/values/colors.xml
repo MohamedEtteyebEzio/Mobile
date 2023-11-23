@@ -5,4 +5,7 @@
         <color name="red">#FF0000</color>
         <color name="grey">#707677</color>
         <color name="pink">#FFC0CB</color>
+        <color name="blue">#C0DCF4</color>
+        <color name="gray">#716A6A</color>
+        <color name="custumblue">#1E7A8F</color>
 </resources>
