@@ -2,6 +2,7 @@
     <string name="app_name">Glooko</string>
     <string name="nav_bar">Blood Glucose Level Measurement</string>
     <string name="Age">Age : </string>
-    <string name="q1" > Are you fasting ?</string>>
+    <string name="q1"> Are you fasting ?</string>
+    <string name="title_activity_login">Login</string>>
 
 </resources>

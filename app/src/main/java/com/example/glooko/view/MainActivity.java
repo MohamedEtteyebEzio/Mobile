@@ -1,7 +1,9 @@
 package com.example.glooko.view;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,24 +17,30 @@ import android.widget.Toast;
 
 import com.example.glooko.R;
 import com.example.glooko.controller.Controller;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     private TextView tvage;
-    private TextView tvres;
+    final int REQUEST_CODE=1;
     private EditText mlevel;
     private SeekBar sbage;
     private Button con;
+    private Button logout;
+
     private RadioGroup grb;
     private boolean fast;
-    private Controller controller = new Controller();
+    FirebaseAuth auth;
+    FirebaseUser  user;
+    private Controller controller = Controller.getIns();
 
     // Initialisation des composants graphiques
     private void init() {
         tvage = findViewById(R.id.tvage);
-        tvres = findViewById(R.id.tvres);
         mlevel = findViewById(R.id.mLevel);
         sbage = findViewById(R.id.skAge);
         con = findViewById(R.id.btn);
+        logout = findViewById(R.id.btnlog);
         grb = findViewById(R.id.Grp);
     }
 
@@ -40,6 +48,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        auth=FirebaseAuth.getInstance();
+        user=auth.getCurrentUser();
+
+        if (user==null){
+
+            Intent intent = new Intent(getApplicationContext(),Login.class);
+            startActivity(intent);
+            finish();
+        }
+
+
+
         init(); // Initialisation des composants graphiques
 
         // Action lors du changement sur la SeekBar
@@ -88,9 +109,37 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     // Création du patient et mise à jour de l'affichage avec le résultat
                     controller.createPatient(sbage.getProgress(), fast, Double.valueOf(mlevel.getText().toString()));
-                    tvres.setText(controller.getPatientRes());
+
+                    Intent intent =new Intent(getApplicationContext(), Result.class);
+                    intent.putExtra("result",controller.getPatientRes());
+
+                    startActivityForResult(intent, REQUEST_CODE);
+
                 }
             }
         });
+
+logout.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(getApplicationContext(),Login.class);
+        startActivity(intent);
+        finish();
+
+    }
+});
+
+
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==REQUEST_CODE&&resultCode==RESULT_CANCELED)
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+        else
+            Toast.makeText(this, "Good", Toast.LENGTH_SHORT).show();
     }
 }

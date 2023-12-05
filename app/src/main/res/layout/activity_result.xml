@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Result">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="393dp"
+        android:layout_height="198dp"
+        android:layout_marginTop="80dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/login"
+
+        >
+
+    </ImageView>
+
+
+    <TextView
+        android:id="@+id/tvres"
+        android:layout_width="161dp"
+        android:layout_height="63dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="385dp"
+        android:layout_marginRight="86dp"
+        android:layout_marginBottom="200dp"
+        android:fontFamily="@font/archivo"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="..."
+        android:textColor="@color/red"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/resbtn"
+        android:layout_width="275dp"
+        android:layout_height="83dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="538dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="119dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/button_shape"
+        android:text="consultaion"
+        android:textSize="25sp">
+
+    </Button>
+
+
+
+
+</RelativeLayout>
