@@ -5,53 +5,67 @@
     android:background="@color/white"
     android:orientation="vertical"
     android:padding="30dp">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welecom Back !"
-        android:textColor="@color/black"
+        android:layout_margin="25dp"
         android:fontFamily="@font/archivo"
+        android:layout_gravity="center"
+        android:text="Sign up"
+        android:textColor="@color/black"
         android:textSize="45sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginTop="25dp"
-        />
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        android:textStyle="bold" />
 
-            />
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="137dp"
+        android:layout_gravity="center"
+        android:src="@drawable/signyp" />
 
     <EditText
-        android:id="@+id/email"
-        android:layout_width="261dp"
+        android:id="@+id/Susername"
+        android:layout_width="392dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/custumblue"
+        android:fontFamily="@font/archivo"
+        android:gravity="center"
+        android:hint="Username"
+        android:inputType="text"
+        android:padding="20dp"
+        android:textSize="19sp" />
+
+    <EditText
+        android:id="@+id/Semail"
+        android:layout_width="388dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:backgroundTint="@color/custumblue"
         android:fontFamily="@font/archivo"
         android:gravity="center"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:padding="20dp"
-        android:textSize="19sp"
-        android:layout_gravity="center"
-        />
+        android:textSize="19sp" />
 
     <EditText
-        android:id="@+id/password"
-        android:layout_width="261dp"
+        android:id="@+id/Spassword"
+
+        android:layout_width="391dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
         android:backgroundTint="@color/custumblue"
         android:fontFamily="@font/archivo"
         android:gravity="center"
-        android:hint="password"
+        android:hint="Password"
         android:inputType="textPassword"
         android:padding="20dp"
-        android:layout_margin="10dp"
-        android:layout_gravity="center"
         android:textSize="19sp" />
 
     <Button
-        android:id="@+id/btnlog"
+        android:id="@+id/btnSign"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -59,21 +73,22 @@
         android:background="@drawable/button_shape"
         android:fontFamily="@font/archivo"
         android:padding="12dp"
-        android:text="Log in"
+        android:text="Sign up"
         android:textColor="@color/white"
         android:textSize="19sp" />
+
+
     <TextView
+        android:id="@+id/tologin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/archivo"
         android:text="Don't have an account ?"
-        android:textSize="20sp"
-        android:textStyle="normal"
         android:textColor="@color/gray"
-        android:layout_gravity="center"
-        />
-
+        android:textSize="20sp"
+        android:textStyle="normal" />
 
     <GridLayout
         android:layout_width="367dp"
@@ -108,5 +123,28 @@
             android:background="@drawable/line_shape" />
     </GridLayout>
 
+    <GridLayout
+        android:layout_width="309dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp">
 
+        <ImageView
+            android:layout_width="187dp"
+            android:layout_height="56dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="left"
+            android:src="@drawable/fb" />
+
+        <ImageView
+            android:layout_width="129dp"
+            android:layout_height="53dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="left"
+            android:src="@drawable/google" />
+
+
+    </GridLayout>
 </LinearLayout>
